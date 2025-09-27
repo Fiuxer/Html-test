@@ -1,0 +1,263 @@
+@font-face {
+  font-family: 'FatFrank Free';
+  src: url('Fonts/FatFrank-Free.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  background: #AFF4C6;
+  color: black;
+  border-color: #5A9272;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+header .menu {
+  display: flex;
+  gap: 10px;
+}
+
+.btnOpenBox {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  vertical-align: bottom;
+}
+
+h1 {
+  margin: 0px;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+header h1 {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+header {
+    grid-area: header;
+    background: #5A9272;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+body {
+  font-family: 'FatFrank Free';
+  font-weight: 900;
+  font-style: normal;
+}
+
+aside {
+  grid-area: sidebar;
+  background: white;
+  align-content: center;
+  text-align: center;
+  font-size: 100px;
+  z-index: 1;
+}
+
+main {
+  grid-area: main;
+  align-self: stretch;
+  justify-self: stretch;
+  background: white;
+
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 50%;
+  width: 100%;
+
+  padding: 80px 0;
+  position: relative;
+}
+
+main::-webkit-scrollbar {
+  display: none;
+}
+
+main::before,
+main::after {
+  content: "";
+  flex: 0 0 50%;
+}
+
+nav {
+  grid-area: navbar;
+  background: white;
+  align-content: center;
+  text-align: center;
+  font-size: 100px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  grid-area: footer;
+  background: #5A9272;
+}
+
+.pastime-container {
+  background: #AFF4C6;
+  border-radius: 16px;
+  flex: 0 0 300px;
+  height: 400px;
+
+  scroll-snap-align: center;
+  opacity: 0.2;
+  transition: all 0.2s ease;
+
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.FatFrank {
+  font-family: 'FatFrank Free';
+  font-weight: 900;
+  font-style: normal;
+}
+
+.arrow {
+  width: 50px;
+  height: 50px;
+}
+
+.scroll-left {
+  background: none;
+  border: none; 
+  padding: 0;
+  cursor: pointer;
+}
+
+.scroll-right {
+  background: none;
+  border: none; 
+  padding: 0;
+  cursor: pointer;
+}
+
+.scroll-left img {
+  display: block;
+}
+
+.scroll-right img {
+  display: block;
+}
+
+.popupBox {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+
+.popupBox img {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  z-index: inherit;
+  opacity: 0;
+}
+
+.popupImg1 {
+  top: 65%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.popupImg2 {
+  top: 40%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+
+.popupImg3 {
+  top: 65%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+
+.name {
+  position: absolute;
+  top: 60px;
+  z-index: 4;
+  left: 10px;
+}
+
+.shi {
+  position: absolute;
+  bottom: 110px;
+  z-index: 4;
+  left: 10px;
+}
+
+
+
+.grid-container {
+  flex: 1;
+  height: 100vh;
+  display: grid;
+  grid-template:
+    "header" 100px
+    "main"   1fr
+    "footer" 100px / 1fr;
+}
+
+@media (max-width: 899px) {
+  .grid-container {
+    display: grid;
+    grid-template:
+      "header" 100px
+      "main"   auto
+      "footer" 100px /
+      100%;
+  }
+
+  button        { width: 100px; height: 30px; }
+  .popupImg2    { top: 55%; }
+  .popupBox img { width: 50px; height: 50px; }
+  main          { padding: 30px; }
+  nav, aside    { display: none; }
+}
+
+@media (min-width: 900px) {
+  .grid-container {
+    display: grid;
+    grid-template:
+      "header  header  header  header"  100px
+      "navbar  main    main    sidebar" minmax(500px, auto)
+      "footer  footer  footer  footer"  100px /
+      200px    auto    auto    200px;
+  }
+
+  button          { width: 150px; height: 50px; }
+  .popupBox img   { width: 100px; height: 100px;}
+  .popupImg2      { top: 40%; }
+  main            { padding: 80px;}
+  nav             { display: block; grid-area: navbar; }
+  aside           { display: block; grid-area: sidebar; }
+}

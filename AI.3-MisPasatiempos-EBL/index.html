@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="Fonts/FatFrank-Free.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <title>Mis Pasatiempos</title>
+</head>
+<body class="FatFrank">
+    <div class="grid-container">
+        <header>
+            <h1>
+                Mis Pasatiempos
+            </h1>
+            <div class="menu">
+                <button onclick="openInfoBox(1)"> Películas </button>
+                <button onclick="openInfoBox(2)"> Escuchar </button>
+                <button onclick="openInfoBox(3)"> Tocar </button>
+                <button onclick="openInfoBox(4)"> Programar </button>
+                <button onclick="openInfoBox(5)"> Créditos </button>
+            </div>
+        </header>
+        <nav>
+            <button id="scroll-left">⬅️</button>
+        </nav>
+        <main>
+            <article class="pastime-container" id="pc1">
+                <h1>
+                    1. Ver películas
+                </h1>
+                <p>
+                   <ul>
+                    <li>Interstellar</li>
+                    <li>La la land</li>
+                    <li>Whiplash</li>
+                    <li>A minecraft movie</li>
+                   </ul>
+                </p>
+                <button class="btnOpenBox" onclick="openInfoBox(1)">
+                    Ver más
+                </button>
+            </article>
+            <article class="pastime-container" id="pc2">
+                <h1>
+                    2. Escuchar música
+                </h1>
+                <p>
+                   <ul>
+                    <li>Imagine dragons</li>
+                    <li>Kendrick Lamar</li>
+                    <li>Tyler the creator</li>
+                    <li>Oztism</li>
+                   </ul>
+                </p>
+                <button class="btnOpenBox" onclick="openInfoBox(2)">
+                    Ver más
+                </button>
+            </article>
+            <article class="pastime-container" id="pc3">
+                <h1>
+                    3. Tocar música
+                </h1>
+                <p>
+                   <ul>
+                    <li>Guitarra</li>
+                    <li>tara tara</li>
+                    <li>Piano</li>
+                    <li>plin plin</li>
+                   </ul>
+                </p>
+                <button class="btnOpenBox" onclick="openInfoBox(3)">
+                    Ver más
+                </button>
+            </article>
+            <article class="pastime-container" id="pc4">
+                <h1>
+                    4. Programar
+                </h1>
+                <p>
+                   <ul>
+                    <li>C++</li>
+                    <li>C</li>
+                    <li>C#</li>
+                    <li>Python</li>
+                   </ul>
+                </p>
+                <button class="btnOpenBox" onclick="openInfoBox(4)">
+                    Ver más
+                </button>
+            </article>
+            <article class="pastime-container" id="pc5">
+                <h1>
+                    5. Créditos
+                </h1>
+                <p>
+                   <ul>
+                    <li>Leonardo Esparza Barranco</li>
+                    <li>CBTIS 168</li>
+                    <li>Programación</li>
+                    <li>Construye aplicaciones web</li>
+                    <li>5L</li>
+                    <a href="https://www.figma.com/design/HhORR28setEVl5C6462iB1/Sin-t%C3%ADtulo?node-id=0-1&t=M5DXxTYiDEJwkak3-1">Figma</a>
+                   </ul>
+                </p>
+                <button class="btnOpenBox" onclick="openInfoBox(5)">
+                    Ver más
+                </button>
+            </article>
+        </main>
+        <aside>
+            <button id="scroll-right">➡️</button>
+        </aside>
+        <footer></footer>
+    </div>
+    <p class="name"> Leonardo Esparza Barranco </p>
+    <p class="shi"> 5L</p>
+    <div class="popupBox">
+        <img class="popupImg1" src="sprites/Transparent.png" alt="">
+        <img class="popupImg2" src="sprites/Transparent.png" alt="">
+        <img class="popupImg3" src="sprites/Transparent.png" alt="">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
